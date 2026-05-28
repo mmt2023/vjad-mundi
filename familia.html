@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>La Sagrada Familia - Historias y Culturas</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:white;color:#222;}
+header{background:#003e6b;padding:20px;text-align:center;color:white;}
+nav ul{display:flex;justify-content:center;gap:20px;margin-top:15px;list-style:none;}
+nav ul li a{color:white;text-decoration:none;font-weight:bold;padding:8px 14px;border-radius:6px;}
+nav ul li a:hover{background:#005c99;}
+header input{margin-top:15px;padding:8px 12px;border-radius:20px;border:none;width:200px;}
+h2{font-size:26px;margin-bottom:15px;color:#003e6b;font-weight:bold;}
+section{padding:50px 20px;}
+.grid-cont{max-width:1050px;margin:auto;display:grid;gap:25px;grid-template-columns:repeat(3,1fr);text-align:center;}
+.item img{width:100%;height:230px;border-radius:15px;object-fit:cover;box-shadow:0 0 6px rgba(0,0,0,0.3);}
+.item p{margin-top:8px;font-weight:bold;}
+.btn{display:inline-block;margin-top:10px;padding:8px 14px;background:#003e6b;color:white;border-radius:8px;text-decoration:none;}
+.btn:hover{background:#005c99;}
+footer{background:#003e6b;color:white;text-align:center;padding:20px;margin-top:40px;}
+.carousel{
+    max-width:900px;
+    margin:40px auto 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.carousel-images{
+    display:flex;
+    transition:transform 0.5s ease-in-out;
+}
+
+.carousel-images img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.carousel button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:30px;
+    padding:8px 14px;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.carousel .prev{left:15px;}
+.carousel .next{right:15px;}
+
+.carousel button:hover{
+    background:rgba(0,0,0,0.8);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>La Sagrada Familia</h1>
+    <nav>
+        <ul>
+            <li><a href="HistoriasYCulturas.html">Inicio</a></li>
+            <li><a href="europa.html">Europa</a></li>
+            <li><a href="Espña.html" style="background:#005c99;">España</a></li>
+        </ul>
+    </nav>
+    <input type="text" placeholder="Buscar...">
+</header>
+
+<section>
+    <h2 style= text-align:center;>¡Explora la cultura e historia de La Sagrada Familia!</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">La Sagrada Familia, ubicada en Barcelona, es una de las obras maestras del arquitecto Antoni Gaudí y un símbolo del modernismo catalán. Comenzó a construirse en 1882 y, aunque sigue inacabada, se ha convertido en uno de los monumentos más visitados del mundo. Gaudí combinó elementos naturales, formas orgánicas y simbolismo religioso para crear un templo único, donde cada fachada narra un pasaje distinto de la vida de Jesús. A pesar de su larga construcción, la Sagrada Familia continúa avanzando siguiendo los planos originales del arquitecto, manteniendo vivo su espíritu innovador y espiritual.  </p>
+
+<div class="carousel">
+    <button class="prev">&#10094;</button>
+
+    <div class="carousel-images">
+        <img src="https://pro.static.holabarcelonablog.tmb.cat/s3fs-public/2020-12/SF.jpg" class="active">
+        <img src="https://d2i7eq829tbbje.cloudfront.net/webp/medium/sagrada1_P_3824_d517b3a6-cce0-4f40-a798-c3d27ec24679">
+        <img src="https://thebarcelonafeeling.com/wp-content/uploads/2022/12/Sagrada-Familia-interior.jpeg">
+    </div>
+
+    <button class="next">&#10095;</button>
+</div>
+
+</section>
+
+<section>
+    <h2 style= text-align:center;>Sostenibilidad</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+Barcelona busca bajar un 80% sus emisiones de gases de efecto invernadero para 2030 mediante promocion de transporte publico como bicicletas y buses y creando zonas de bajas emisiones en la ciudad.
+
+
+
+
+
+
+
+
+</p>
+
+
+<script>
+let index = 0;
+const images = document.querySelector('.carousel-images');
+const total = images.children.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+    index = (index + 1) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+
+
+<footer>
+    © 2025 - Historias y Culturas del Mundo
+</footer>
+
+</body>
+</html>

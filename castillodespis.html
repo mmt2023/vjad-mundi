@@ -1,0 +1,138 @@
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Castillo de Spis - Historias y Culturas</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:white;color:#222;}
+header{background:#003e6b;padding:20px;text-align:center;color:white;}
+nav ul{display:flex;justify-content:center;gap:20px;margin-top:15px;list-style:none;}
+nav ul li a{color:white;text-decoration:none;font-weight:bold;padding:8px 14px;border-radius:6px;}
+nav ul li a:hover{background:#005c99;}
+header input{margin-top:15px;padding:8px 12px;border-radius:20px;border:none;width:200px;}
+h2{font-size:26px;margin-bottom:15px;color:#003e6b;font-weight:bold;}
+section{padding:50px 20px;}
+.grid-cont{max-width:1050px;margin:auto;display:grid;gap:25px;grid-template-columns:repeat(3,1fr);text-align:center;}
+.item img{width:100%;height:230px;border-radius:15px;object-fit:cover;box-shadow:0 0 6px rgba(0,0,0,0.3);}
+.item p{margin-top:8px;font-weight:bold;}
+.btn{display:inline-block;margin-top:10px;padding:8px 14px;background:#003e6b;color:white;border-radius:8px;text-decoration:none;}
+.btn:hover{background:#005c99;}
+footer{background:#003e6b;color:white;text-align:center;padding:20px;margin-top:40px;}
+.carousel{
+    max-width:900px;
+    margin:40px auto 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.carousel-images{
+    display:flex;
+    transition:transform 0.5s ease-in-out;
+}
+
+.carousel-images img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.carousel button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:30px;
+    padding:8px 14px;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.carousel .prev{left:15px;}
+.carousel .next{right:15px;}
+
+.carousel button:hover{
+    background:rgba(0,0,0,0.8);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Castillo de Spis</h1>
+    <nav>
+        <ul>
+            <li><a href="HistoriasYCulturas.html">Inicio</a></li>
+            <li><a href="Europa.html">Europa</a></li>
+            <li><a href="eslovaquia.html" style="background:#005c99;">Eslovaquia</a></li>
+        </ul>
+    </nav>
+    <input type="text" placeholder="Buscar...">
+</header>
+
+<section>
+    <h2 style= text-align:center;>¡Explora la cultura e historia de Castillo de Spis!</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+El Castillo de Spiš es una de las fortalezas medievales más grandes de Europa Central y fue construido en el siglo XII sobre una colina estratégica. A lo largo de los siglos, fue ampliado y utilizado por diferentes nobles y gobernantes, convirtiéndose en un importante centro administrativo y militar. Durante la Edad Media, desempeñó un papel clave en la defensa del territorio y en la gestión regional. Con el tiempo, fue abandonado y sufrió un incendio en el siglo XVIII que lo dejó en ruinas. A pesar de ello, se ha conservado como un impresionante testimonio histórico. Hoy es Patrimonio de la Humanidad y un símbolo nacional. Su historia refleja poder feudal, conflicto y decadencia.
+</p>
+
+<div class="carousel">
+    <button class="prev">&#10094;</button>
+
+    <div class="carousel-images">
+        <img src="https://www.trazandoruta.com/wp-content/uploads/2018/04/como_visitar_castillo_spis_eslovaquia.jpg" class="active">
+        <img src="https://phantom-elmundo.unidadeditorial.es/554fd81d84184041bcc70e6ff7397e39/resize/640/assets/multimedia/imagenes/2021/01/20/16111430713118.jpg">
+        <img src="https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2024/11/04/castillo-de-spis-eslovaquia.jpeg">
+    </div>
+
+    <button class="next">&#10095;</button>
+</div>
+
+</section>
+
+<section>
+    <h2 style= text-align:center;>Sostenibilidad</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+La conservación del Castillo de Spiš es un desafío debido a su tamaño y estado parcialmente en ruinas. Se han llevado a cabo trabajos de restauración para estabilizar las estructuras y evitar su deterioro. El turismo aporta ingresos necesarios, pero también requiere una gestión cuidadosa para proteger el sitio. Se han establecido rutas señalizadas para minimizar el impacto de los visitantes. Además, se promueve la educación sobre su valor histórico y cultural. El entorno natural que lo rodea también debe preservarse. La sostenibilidad depende de equilibrar conservación, investigación y turismo responsable.
+
+
+
+
+
+
+</p>
+
+
+<script>
+let index = 0;
+const images = document.querySelector('.carousel-images');
+const total = images.children.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+    index = (index + 1) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+
+
+<footer>
+    © 2025 - Historias y Culturas del Mundo
+</footer>
+
+</body>
+</html>

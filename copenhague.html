@@ -1,0 +1,137 @@
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Copenhague - Historias y Culturas</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:white;color:#222;}
+header{background:#003e6b;padding:20px;text-align:center;color:white;}
+nav ul{display:flex;justify-content:center;gap:20px;margin-top:15px;list-style:none;}
+nav ul li a{color:white;text-decoration:none;font-weight:bold;padding:8px 14px;border-radius:6px;}
+nav ul li a:hover{background:#005c99;}
+header input{margin-top:15px;padding:8px 12px;border-radius:20px;border:none;width:200px;}
+h2{font-size:26px;margin-bottom:15px;color:#003e6b;font-weight:bold;}
+section{padding:50px 20px;}
+.grid-cont{max-width:1050px;margin:auto;display:grid;gap:25px;grid-template-columns:repeat(3,1fr);text-align:center;}
+.item img{width:100%;height:230px;border-radius:15px;object-fit:cover;box-shadow:0 0 6px rgba(0,0,0,0.3);}
+.item p{margin-top:8px;font-weight:bold;}
+.btn{display:inline-block;margin-top:10px;padding:8px 14px;background:#003e6b;color:white;border-radius:8px;text-decoration:none;}
+.btn:hover{background:#005c99;}
+footer{background:#003e6b;color:white;text-align:center;padding:20px;margin-top:40px;}
+.carousel{
+    max-width:900px;
+    margin:40px auto 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.carousel-images{
+    display:flex;
+    transition:transform 0.5s ease-in-out;
+}
+
+.carousel-images img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.carousel button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:30px;
+    padding:8px 14px;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.carousel .prev{left:15px;}
+.carousel .next{right:15px;}
+
+.carousel button:hover{
+    background:rgba(0,0,0,0.8);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Copenhague</h1>
+    <nav>
+        <ul>
+            <li><a href="HistoriasYCulturas.html">Inicio</a></li>
+            <li><a href="Europa.html">Europa</a></li>
+            <li><a href="dinamarca.html" style="background:#005c99;">Dinamarca</a></li>
+        </ul>
+    </nav>
+    <input type="text" placeholder="Buscar...">
+</header>
+
+<section>
+    <h2 style= text-align:center;>¡Explora la cultura e historia de Copenhague!</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+Copenhague es la capital de Dinamarca y su origen se remonta al siglo X, cuando era un pequeño asentamiento pesquero vikingo situado en una ubicación estratégica junto al mar Báltico. Con el paso del tiempo, se convirtió en un importante centro comercial gracias a su puerto y su posición en las rutas marítimas del norte de Europa. Durante la Edad Media, creció bajo la influencia de la monarquía danesa y se consolidó como capital del reino. En los siglos posteriores, se desarrolló como un centro cultural y político relevante. Ha sido escenario de incendios, guerras y reconstrucciones que han marcado su evolución. Hoy combina tradición histórica con modernidad urbana.
+</p>
+
+<div class="carousel">
+    <button class="prev">&#10094;</button>
+
+    <div class="carousel-images">
+        <img src="https://www.civitatis.com/blog/wp-content/uploads/2019/09/shutterstock_378539728-scaled.jpg" class="active">
+        <img src="https://images.ecestaticos.com/Eha5BQExbrkOVLCYYSOibX40YRQ=/0x0:1000x750/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F036%2Fcf6%2F706%2F036cf6706198f8ac3e0fbeb0a759e020.jpg">
+        <img src="https://www.civitatis.com/blog/wp-content/uploads/2019/09/canal-Nyhavn-1280x852.jpg">
+    </div>
+
+    <button class="next">&#10095;</button>
+</div>
+
+</section>
+
+<section>
+    <h2 style= text-align:center;>Sostenibilidad</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+Copenhague es considerada una de las ciudades más sostenibles del mundo debido a sus avanzadas políticas ambientales y urbanas. La ciudad apuesta fuertemente por el uso de la bicicleta, con una extensa red de carriles bici que reduce significativamente el uso de vehículos privados. Además, gran parte de su energía proviene de fuentes renovables como la eólica. El transporte público es eficiente y está bien integrado, lo que facilita la movilidad sostenible. También se han implementado soluciones innovadoras para la gestión de residuos y el tratamiento del agua. La ciudad tiene como objetivo convertirse en neutra en carbono en los próximos años. La sostenibilidad es un eje central de su desarrollo urbano.
+
+
+
+
+
+</p>
+
+
+<script>
+let index = 0;
+const images = document.querySelector('.carousel-images');
+const total = images.children.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+    index = (index + 1) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+
+
+<footer>
+    © 2025 - Historias y Culturas del Mundo
+</footer>
+
+</body>
+</html>

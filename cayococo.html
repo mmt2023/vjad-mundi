@@ -1,0 +1,133 @@
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cayo Coco - Historias y Culturas</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:white;color:#222;}
+header{background:#003e6b;padding:20px;text-align:center;color:white;}
+nav ul{display:flex;justify-content:center;gap:20px;margin-top:15px;list-style:none;}
+nav ul li a{color:white;text-decoration:none;font-weight:bold;padding:8px 14px;border-radius:6px;}
+nav ul li a:hover{background:#005c99;}
+header input{margin-top:15px;padding:8px 12px;border-radius:20px;border:none;width:200px;}
+h2{font-size:26px;margin-bottom:15px;color:#003e6b;font-weight:bold;}
+section{padding:50px 20px;}
+.grid-cont{max-width:1050px;margin:auto;display:grid;gap:25px;grid-template-columns:repeat(3,1fr);text-align:center;}
+.item img{width:100%;height:230px;border-radius:15px;object-fit:cover;box-shadow:0 0 6px rgba(0,0,0,0.3);}
+.item p{margin-top:8px;font-weight:bold;}
+.btn{display:inline-block;margin-top:10px;padding:8px 14px;background:#003e6b;color:white;border-radius:8px;text-decoration:none;}
+.btn:hover{background:#005c99;}
+footer{background:#003e6b;color:white;text-align:center;padding:20px;margin-top:40px;}
+.carousel{
+    max-width:900px;
+    margin:40px auto 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.carousel-images{
+    display:flex;
+    transition:transform 0.5s ease-in-out;
+}
+
+.carousel-images img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.carousel button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:30px;
+    padding:8px 14px;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.carousel .prev{left:15px;}
+.carousel .next{right:15px;}
+
+.carousel button:hover{
+    background:rgba(0,0,0,0.8);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Cayo Coco</h1>
+    <nav>
+        <ul>
+            <li><a href="HistoriasYCulturas.html">Inicio</a></li>
+            <li><a href="america.html">America</a></li>
+            <li><a href="cuba.html" style="background:#005c99;">Cuba</a></li>
+        </ul>
+    </nav>
+    <input type="text" placeholder="Buscar...">
+</header>
+
+<section>
+    <h2 style= text-align:center;>¡Explora la cultura e historia de Cayo Coco!</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+Cayo Coco, situado en el archipiélago Jardines del Rey al norte de Cuba, es una paradisíaca isla de 370 conocida por sus 22 km de playas de arena blanca y aguas turquesas, destacando como un importante polo turístico con hoteles "todo incluido" desde 1993. Históricamente, fue refugio de piratas en el siglo XVIII, zona de producción de carbón vegetal hasta mediados del XX y, tras la construcción de un pedraplén de 17 km que lo une a la isla principal, se convirtió en un destino internacional de naturaleza, famoso por sus colonias de flamencos y el Parque Natural El Bagá.
+</p>
+<div class="carousel">
+    <button class="prev">&#10094;</button>
+
+    <div class="carousel-images">
+        <img src="https://content.r9cdn.net/rimg/dimg/da/69/311efd02-city-52228-166acb17a2e.jpg?crop=true&width=1366&height=768&xhint=2733&yhint=2085" class="active">
+        <img src ="https://media.viajando.travel/p/2c88eacc5830fe6667ccd2c86a81d58c/adjuntos/236/imagenes/000/632/0000632617/cayo-coco-cuba-playa.jpg">
+        <img src ="https://images.visitarcuba.org/Playas-en-Cayo-Coco.jpg">
+    </div>
+
+    <button class="next">&#10095;</button>
+</div>
+
+</section>
+
+<section>
+    <h2 style= text-align:center;>Sostenibilidad</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+Cayo Coco, situado en el archipiélago Jardines del Rey en Cuba, avanza hacia un modelo de turismo sostenible mediante la integración de sus infraestructuras hoteleras en un entorno natural protegido, minimizando la huella ecológica a través de la gestión de residuos y la protección de la biodiversidad local. Como parte del "Plan Tarea Vida" y proyectos con el PNUD, la zona implementa prácticas de eficiencia energética, como el uso de energía solar, y busca conservar sus ecosistemas marinos, arrecifes de coral y colonias de flamencos, promoviendo un equilibrio entre el desarrollo turístico, la protección del paisaje virgen y la conservación de su fauna endémica. 
+
+</p>
+
+
+<script>
+let index = 0;
+const images = document.querySelector('.carousel-images');
+const total = images.children.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+    index = (index + 1) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+
+
+<footer>
+    © 2025 - Historias y Culturas del Mundo
+</footer>
+
+</body>
+</html>
+</body>

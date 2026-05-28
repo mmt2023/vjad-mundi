@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Historias y Culturas del Mundo</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:white;color:#222;}
+
+position: sticky;
+top: 0;
+z-index: 1000;
+
+header{
+    background:#003e6b;
+    padding:20px;
+    color:white;
+}
+
+.header-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    height:60px;
+}
+
+header h1{
+    flex-grow:1;
+    text-align:center;
+}
+
+nav ul{display:flex;justify-content:center;gap:20px;margin-top:15px;list-style:none;}
+nav ul li a{color:white;text-decoration:none;font-weight:bold;padding:8px 14px;border-radius:6px;}
+nav ul li a:hover{background:#005c99;}
+
+header input{
+    display:block;
+    margin:15px auto 0;
+    padding:8px 12px;
+    border-radius:20px;
+    border:none;
+    width:200px;
+}
+
+h2{font-size:26px;margin-bottom:15px;color:#003e6b;font-weight:bold;}
+section{padding:50px 20px;}
+
+.grid-cont{max-width:1050px;margin:auto;display:grid;gap:25px;grid-template-columns:repeat(3,1fr);text-align:center;}
+.item img{width:100%;height:230px;border-radius:15px;object-fit:cover;box-shadow:0 0 6px rgba(0,0,0,0.3);}
+.item p{margin-top:8px;font-weight:bold;}
+
+.btn{display:inline-block;margin-top:10px;padding:8px 14px;background:#003e6b;color:white;border-radius:8px;text-decoration:none;}
+.btn:hover{background:#005c99;}
+
+iframe{width:600px;height:400px;border:3px solid #003e6b;border-radius:10px;margin-top:20px;}
+
+footer{background:#003e6b;color:white;text-align:justify;padding:20px;margin-top:40px;}
+.item img{
+    width:100%;
+    height:230px;
+    border-radius:15px;
+    object-fit:cover;
+    box-shadow:0 0 6px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.item img:hover{
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.item{
+    transition: transform 0.3s ease;
+}
+
+.item:hover{
+    transform: translateY(-10px);
+}
+
+header{
+    background:#003e6b;
+    padding:20px;
+    color:white;
+    transition: all 0.3s ease;
+}
+
+/* Cuando pasas el ratón por el header */
+header:hover{
+    background:#002a4a;
+}
+
+.logo{
+    height:60px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.15) rotate(-5deg);
+}
+
+header h1{
+    flex-grow:1;
+    text-align:center;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+header h1:hover{
+    transform: scale(1.05);
+    letter-spacing:2px;
+}
+
+nav ul li a{
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover{
+    background:#00a3ff;
+    transform: translateY(-3px);
+}
+
+header input{
+    display:block;
+    margin:15px auto 0;
+    padding:8px 12px;
+    border-radius:20px;
+    border:none;
+    width:200px;
+    transition: all 0.3s ease;
+}
+
+header input:hover{
+    width:260px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+header input:focus{
+    outline:none;
+    width:280px;
+    box-shadow:0 0 15px rgba(0, 180, 255, 0.6);
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-top">
+        
+        <img src="https://coolturetablog.wordpress.com/wp-content/uploads/2016/04/mundo.png" class="logo">
+
+    <h1>Historias y Culturas del Mundo</h1>
+    <nav>
+        <ul>
+            <li><a href="HistoriasYCulturas.html" style="background:#005c99;">Inicio</a></li>
+            <li><a href="america.html">América</a></li>
+            <li><a href="africa.html">África</a></li>
+            <li><a href="oceania.html">Oceanía</a></li>
+            <li><a href="europa.html">Europa</a></li>
+            <li><a href="asia.html">Asia</a></li>
+            
+        </ul>
+    </nav>
+
+    
+
+    <input id="searchInput" type="text" placeholder="Buscar..." onkeypress="checkEnter(event)">
+
+</header>
+
+<section>
+    <h2 style="text-align: center;">¡Investiga sobre la cultura e historia de estos continentes!</h2>
+    <div class="grid-cont">
+        <div class="item">
+            <a href="america.html"><img src="https://i0.wp.com/lugarnia.com/wp-content/uploads/2018/06/cristo-redentor-e1528438479430.jpg?fit=1193%2C752&ssl=1"></a>
+            <p>América</p>
+        </div>
+        <div class="item">
+            <a href="africa.html"><img src="https://preview.redd.it/african-renaissance-monument-dakar-senegal-v0-1dt5pai8mycd1.jpg?width=640&crop=smart&auto=webp&s=66a0d0e64538069e6566222ad08bfae778d4552f"></a>
+            <p>Africa</p>
+        </div>
+        <div class="item">
+            <a href="oceania.html"><img src="https://s2.elespanol.com/2024/08/07/viajes/876423044_248344030_1706x1280.jpg"></a>
+            <p>Oceanía</p>
+        </div>
+
+        <div class="item">
+            <a href="europa.html"><img src="https://imagenes.20minutos.es/files/image_640_auto/uploads/imagenes/2022/04/25/torre-de-pisa-italia.jpeg"></a>
+            <p>Europa</p>
+        </div>
+        <div class="item">
+            <a href="asia.html"><img src="https://www.civitatis.com/blog/wp-content/uploads/2016/05/Templo-de-la-Primavera-1-720x462.jpg"></a>
+            <p>Asia</p>
+        </div>
+        <div class="item">
+            <a href="sostenibilidad.html"><img src="https://bmfschool.com/wp-content/uploads/2024/10/Sostenibilidad-y-negocios-768x432.jpg"></a>
+            <p>Sostenibilidad y Juegos</p>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+        “Historias y Culturas del Mundo” es una página web educativa diseñada para explorar de forma sencilla y visual la diversidad cultural del planeta.
+    </p><br>
+    <p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+        A través de diferentes secciones organizadas por continentes y países, el usuario puede descubrir tradiciones, costumbres, historia, gastronomía, arte y curiosidades de cada lugar.
+    </p>
+</section>
+
+</section>
+
+<section>
+    <h2 style="text-align: center;">Sostenibilidad y Cultura</h2>
+    <p style="max-width:900px;margin:auto;text-align:justify;font-size:18px;">
+       La web “Historias y Culturas del Mundo” incorpora un enfoque sostenible mostrando cómo distintas culturas han desarrollado prácticas respetuosas con el entorno a lo largo del tiempo...
+    </p>
+</section>
+
+<div style="text-align:center; margin-top:40px;">
+    <h2>Explora el Mundo en el Mapa</h2>
+
+    <input id="mapSearch" type="text" placeholder="Buscar lugar..."
+        style="width:300px;padding:10px;border-radius:20px;border:2px solid #003e6b;margin-bottom:15px;text-align:center;">
+
+    <br>
+
+    <iframe 
+        id="mapFrame"
+        width="100%" 
+        height="500" 
+        style="border:3px solid #003e6b; border-radius:15px; max-width:1000px;"
+        src="https://www.google.com/maps?q=20,0&z=2&output=embed">
+    </iframe>
+</div>
+
+<footer>
+    © 2025 - Historias y Culturas del Mundo
+</footer>
+
+<script>
+function checkEnter(e) {
+    if(e.key === 'Enter') {
+
+        const input = document.getElementById('searchInput').value.toLowerCase().trim();
+
+        const pages = {
+            'america':'america.html',
+            'europa':'europa.html',
+            'asia':'asia.html',
+            'africa':'africa.html',
+            'oceania':'oceania.html',
+            'sostenibilidad':'sostenibilidad.html',
+
+            'españa':'espña.html',
+            'espana':'espña.html',
+            'brasil':'brasil.html',
+            'peru':'peru.html',
+            'eeuu':'eeuu.html',
+            'estados unidos':'eeuu.html',
+'afganistan':'afganistan.html',
+'albania':'albania.html',
+'alemania':'alemania.html',
+'andorra':'andorra.html',
+'angola':'angola.html',
+'antigua y barbuda':'antigua_y_barbuda.html',
+'arabia saudita':'arabia_saudita.html',
+'argelia':'argelia.html',
+'argentina':'argentina.html',
+'armenia':'armenia.html',
+'australia':'australia.html',
+'austria':'austria.html',
+'azerbaiyan':'azerbaiyan.html',
+'bahamas':'bahamas.html',
+'bangladesh':'bangladesh.html',
+'barbados':'barbados.html',
+'barein':'barein.html',
+'belgica':'belgica.html',
+'belice':'belice.html',
+'benin':'benin.html',
+'kenia':'kenya.html',
+'bielorrusia':'bielorrusia.html',
+'bolivia':'bolivia.html',
+'bosnia':'bosnia.html',
+'botsuana':'botsuana.html',
+'brunei':'brunei.html',
+'bulgaria':'bulgaria.html',
+'burkina faso':'burkinafaso.html',
+'burundi':'burundi.html',
+'butan':'butan.html',
+'cabo verde':'cabo_verde.html',
+'camboya':'camboya.html',
+'camerun':'camerun.html',
+'canada':'canada.html',
+'catar':'catar.html',
+'chad':'chad.html',
+'chile':'chile.html',
+'china':'china.html',
+'chipre':'chipre.html',
+'colombia':'colombia.html',
+'comoras':'comoras.html',
+'corea del norte':'corea_del_norte.html',
+'corea del sur':'corea_del_sur.html',
+'costa rica':'costa_rica.html',
+'costa de marfil':'costa_de_marfil.html',
+'croacia':'croacia.html',
+'cuba':'cuba.html',
+'dinamarca':'dinamarca.html',
+'dominica':'dominica.html',
+'ecuador':'ecuador.html',
+'egipto':'egipto.html',
+'el salvador':'elsalvador.html',
+'emiratos arabes unidos':'emiratos_arabes_unidos.html',
+'eritrea':'eritrea.html',
+'eslovaquia':'eslovaquia.html',
+'eslovenia':'eslovenia.html',
+'estonia':'estonia.html',
+'etiopia':'etiopia.html',
+'filipinas':'filipinas.html',
+'finlandia':'finlandia.html',
+'fiyi':'fiyi.html',
+'francia':'francia.html',
+'gabon':'gabon.html',
+'gambia':'gambia.html',
+'georgia':'georgia.html',
+'ghana':'ghana.html',
+'granada':'granada.html',
+'grecia':'grecia.html',
+'guatemala':'guatemala.html',
+'guinea':'guinea.html',
+'guinea bisau':'guinea_bisau.html',
+'guinea ecuatorial':'guinea_ecuatorial.html',
+'guyana':'guyana.html',
+'haiti':'haiti.html',
+'honduras':'honduras.html',
+'hungria':'hungria.html',
+'india':'india.html',
+'indonesia':'indonesia.html',
+'irak':'irak.html',
+'iran':'iran.html',
+'irlanda':'irlanda.html',
+'islandia':'islandia.html',
+'israel':'israel.html',
+'italia':'italia.html',
+'jamaica':'jamaica.html',
+'japon':'japon.html',
+'jordania':'jordania.html',
+'kazajistan':'kazajistan.html',
+'kenia':'kenya.html',
+'kirguistan':'kirguistan.html',
+'kiribati':'kiribati.html',
+'kuwait':'kuwait.html',
+'laos':'laos.html',
+'lesoto':'lesoto.html',
+'letonia':'letonia.html',
+'libano':'libano.html',
+'liberia':'liberia.html',
+'libia':'libia.html',
+'liechtenstein':'liechtenstein.html',
+'lituania':'lituania.html',
+'luxemburgo':'luxemburgo.html',
+'macedonia':'macedonia.html',
+'madagascar':'madagascar.html',
+'malasia':'malasia.html',
+'malaui':'malaui.html',
+'maldivas':'maldivas.html',
+'mali':'mali.html',
+'malta':'malta.html',
+'marruecos':'marrueco.html',
+'mauricio':'mauricio.html',
+'mauritania':'mauritania.html',
+'mexico':'mexico.html',
+'moldavia':'moldavia.html',
+'monaco':'monaco.html',
+'mongolia':'mongolia.html',
+'montenegro':'montenegro.html',
+'mozambique':'mozambique.html',
+'myanmar':'myanmar.html',
+'namibia':'namibia.html',
+'nauru':'nauru.html',
+'nepal':'nepal.html',
+'nicaragua':'nicaragua.html',
+'niger':'niger.html',
+'nigeria':'nigeria.html',
+'noruega':'noruega.html',
+'nueva zelanda':'nueva_zelanda.html',
+'oman':'oman.html',
+'paises bajos':'paises_bajos.html',
+'pakistan':'pakistan.html',
+'panama':'panama.html',
+'paraguay':'paraguay.html',
+'papua nueva guinea':'pang.html',
+'polonia':'polonia.html',
+'portugal':'portugal.html',
+'reino unido':'reino_unido.html',
+'republica dominicana':'republica_dominicana.html',
+'republica checa':'republica_checa.html',
+'rumania':'rumania.html',
+'rusia':'rusia.html',
+'ruanda':'ruanda.html',
+'samoa':'samoa.html',
+'san marino':'san_marino.html',
+'serbia':'serbia.html',
+'seychelles':'seychelles.html',
+'singapur':'singapur.html',
+'siria':'siria.html',
+'somalia':'somalia.html',
+'sri lanka':'sri_lanka.html',
+'sudafrica':'sudafrica.html',
+'sudan':'sudan.html',
+'suecia':'suecia.html',
+'suiza':'suiza.html',
+'surinam':'surinam.html',
+'tailandia':'tailandia.html',
+'tanzania':'tanzania.html',
+'tunez':'tunez.html',
+'turquia':'turquia.html',
+'ucrania':'ucrania.html',
+'uruguay':'uruguay.html',
+'venezuela':'venezuela.html',
+'vietnam':'vietnam.html',
+'yemen':'yemen.html',
+'zambia':'zambia.html',
+'zimbabue':'zimbabue.html',
+'republica centroafricana':'republica_centroafricana.html',
+'republica del congo':'republica_del_congo.html',
+'republica democratica del congo':'republica_democratica_del_congo.html',
+'sudan del sur':'sudan_del_sur.html',
+'sierra leona':'sierra_leona.html',
+'senegal':'senegal.html',
+'togo':'togo.html',
+'uganda':'uganda.html',
+
+'tayikistan':'tayikistan.html',
+'turkmenistan':'turkmenistan.html',
+'uzbekistan':'uzbekistan.html',
+
+'timor oriental':'timor_oriental.html',
+
+'tonga':'tonga.html',
+'tuvalu':'tuvalu.html',
+'vanuatu':'vanuatu.html',
+'palaos':'palaos.html',
+'micronesia':'micronesia.html',
+'papua nueva guinea':'pang.html',
+'islas marshall':'islas_marshall.html',
+'islas salomon':'islas_salomon.html',
+
+'san cristobal y nieves':'san_cristobal_y_nieves.html',
+'san vicente y las granadinas':'san_vicente_y_las_granadinas.html',
+'santa lucia':'santa_lucia.html',
+'santo tome y principe':'santo_tome_y_principe.html',
+'dominica':'dominica.html',
+
+'vaticano':'vaticano.html'
+
+
+
+        };
+
+        if(pages[input]) {
+            window.location.href = pages[input];
+        } else {
+            alert('No se encontró el lugar. Intenta con otro nombre.');
+        }
+    }
+}
+
+document.getElementById("mapSearch").addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        let lugar = this.value.trim();
+        if(lugar !== ""){
+            document.getElementById("mapFrame").src =
+                "https://www.google.com/maps?q=" + encodeURIComponent(lugar) + "&output=embed";
+        }
+    }
+});
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

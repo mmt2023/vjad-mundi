@@ -1,0 +1,146 @@
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Kumano Kodo  - Historias y Culturas</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:white;color:#222;}
+header{background:#003e6b;padding:20px;text-align:center;color:white;}
+nav ul{display:flex;justify-content:center;gap:20px;margin-top:15px;list-style:none;}
+nav ul li a{color:white;text-decoration:none;font-weight:bold;padding:8px 14px;border-radius:6px;}
+nav ul li a:hover{background:#005c99;}
+header input{margin-top:15px;padding:8px 12px;border-radius:20px;border:none;width:200px;}
+h2{font-size:26px;margin-bottom:15px;color:#003e6b;font-weight:bold;}
+section{padding:50px 20px;}
+.grid-cont{max-width:1050px;margin:auto;display:grid;gap:25px;grid-template-columns:repeat(3,1fr);text-align:center;}
+.item img{width:100%;height:230px;border-radius:15px;object-fit:cover;box-shadow:0 0 6px rgba(0,0,0,0.3);}
+.item p{margin-top:8px;font-weight:bold;}
+.btn{display:inline-block;margin-top:10px;padding:8px 14px;background:#003e6b;color:white;border-radius:8px;text-decoration:none;}
+.btn:hover{background:#005c99;}
+footer{background:#003e6b;color:white;text-align:center;padding:20px;margin-top:40px;}
+.carousel{
+    max-width:900px;
+    margin:40px auto 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.carousel-images{
+    display:flex;
+    transition:transform 0.5s ease-in-out;
+}
+
+.carousel-images img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.carousel button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:30px;
+    padding:8px 14px;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.carousel .prev{left:15px;}
+.carousel .next{right:15px;}
+
+.carousel button:hover{
+    background:rgba(0,0,0,0.8);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Kumano Kodo</h1>
+    <nav>
+        <ul>
+            <li><a href="HistoriasYCulturas.html">Inicio</a></li>
+            <li><a href="asia.html">Asia</a></li>
+            <li><a href="japon.html" style="background:#005c99;">Japón</a></li>
+        </ul>
+    </nav>
+    <input type="text" placeholder="Buscar...">
+</header>
+
+<section>
+    <h2 style= text-align:center;>¡Explora la cultura e historia de Kumano Kodo!</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+Kumana Kodo también conocido como el Camino de Kumano, es una red de caminos que conectan los tres grandes santuarios conocidos grupalmente como Kumano Sanzan.
+Es además uno de los caminos de peregrinación más famosos de Japón, equivalente al Camino de Santiago de Compostela en España, ambos caminos son las dos únicas rutas de peregrinación consideradas como Patrimonio de la Humanidad por la UNESCO.
+
+El Kumano Kodo se encuentra en el medio de la isla principal de Japón, Honshu, se encuentra en la región de Kansai, exactamente en la península de Kii, una de las penínsulas más grandes de la isla de Honshu en Japón, con una superficie de 9.900 km².
+
+
+
+</p>
+
+<div class="carousel">
+    <button class="prev">&#10094;</button>
+
+    <div class="carousel-images">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidaYdOuEwIrVQalEvghdyDJR_02Q72cY8HmEJY5rwR-EzyFhSD07lFAPE7gEAPakn1ZI7pjCQJbOgzfrRBh4LALKF0bmFkuUabUtwwI68rlMPPsJUXfnxcoBJ3stJenpgiU0YM35ZGRUFs/s1600/_DSC6951.jpg" class="active">
+        <img src="https://fotografias.lasexta.com/clipping/cmsimages01/2018/12/18/274959D2-4473-47F7-AF93-1CE40F754502/98.jpg?crop=960,540,x0,y66&width=1900&height=1069&optimize=high&format=webply">
+        <img src="https://cdn.gaijinpot.com/app/uploads/sites/6/2019/11/Kohechi-Kumano-Kodo-1024x681.jpg">
+    </div>
+
+    <button class="next">&#10095;</button>
+</div>
+
+</section>
+
+<section>
+    <h2 style= text-align:center;>Sostenibilidad</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+Gestiona la sostenibilidad mediante la conservación de sus antiguos caminos de peregrinación. El tránsito se controla a través de rutas definidas, alojamientos tradicionales regulados y normas estrictas de respeto cultural y ambiental, garantizando la preservación espiritual y natural del área.
+
+
+
+
+
+
+
+
+</p>
+
+
+<script>
+let index = 0;
+const images = document.querySelector('.carousel-images');
+const total = images.children.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+    index = (index + 1) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+
+
+<footer>
+    © 2025 - Historias y Culturas del Mundo
+</footer>
+
+</body>
+</html>

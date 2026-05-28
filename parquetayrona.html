@@ -1,0 +1,136 @@
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Parque de Tayrona - Historias y Culturas</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:white;color:#222;}
+header{background:#003e6b;padding:20px;text-align:center;color:white;}
+nav ul{display:flex;justify-content:center;gap:20px;margin-top:15px;list-style:none;}
+nav ul li a{color:white;text-decoration:none;font-weight:bold;padding:8px 14px;border-radius:6px;}
+nav ul li a:hover{background:#005c99;}
+header input{margin-top:15px;padding:8px 12px;border-radius:20px;border:none;width:200px;}
+h2{font-size:26px;margin-bottom:15px;color:#003e6b;font-weight:bold;}
+section{padding:50px 20px;}
+.grid-cont{max-width:1050px;margin:auto;display:grid;gap:25px;grid-template-columns:repeat(3,1fr);text-align:center;}
+.item img{width:100%;height:230px;border-radius:15px;object-fit:cover;box-shadow:0 0 6px rgba(0,0,0,0.3);}
+.item p{margin-top:8px;font-weight:bold;}
+.btn{display:inline-block;margin-top:10px;padding:8px 14px;background:#003e6b;color:white;border-radius:8px;text-decoration:none;}
+.btn:hover{background:#005c99;}
+footer{background:#003e6b;color:white;text-align:center;padding:20px;margin-top:40px;}
+.carousel{
+    max-width:900px;
+    margin:40px auto 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.carousel-images{
+    display:flex;
+    transition:transform 0.5s ease-in-out;
+}
+
+.carousel-images img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.carousel button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:30px;
+    padding:8px 14px;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.carousel .prev{left:15px;}
+.carousel .next{right:15px;}
+
+.carousel button:hover{
+    background:rgba(0,0,0,0.8);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Parque de Tayrona</h1>
+    <nav>
+        <ul>
+            <li><a href="HistoriasYCulturas.html">Inicio</a></li>
+            <li><a href="colombia.html">Colombia</a></li>
+            <li><a href="america.html" style="background:#005c99;">America</a></li>
+        </ul>
+    </nav>
+    <input type="text" placeholder="Buscar...">
+</header>
+
+<section>
+    <h2 style= text-align:center;>¡Explora la cultura e historia del Parque de Tayrona!</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+El Parque Nacional Natural Tayrona, establecido en 1964 y ubicado cerca de Santa Marta, Colombia, protege 15,000 hectáreas terrestres y 4,500 marinas en la Sierra Nevada. Es un sitio sagrado para las etnias Kogui, Arhuaco, Wiwa y Kankuamo, descendientes de los Tayrona. Ofrece playas paradisíacas (Cabo San Juan, La Piscina), selva tropical y ruinas arqueológicas. 
+</p>
+
+<div class="carousel">
+    <button class="prev">&#10094;</button>
+
+    <div class="carousel-images">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/eb/0f/f7/parque-nacional-natural.jpg?w=1200&h=-1&s=1" class="active">
+        <img src="https://e01-elmundo.uecdn.es/assets/multimedia/imagenes/2024/04/08/17125820913517.jpg">
+        <img src="https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic2714030.webp?w=1600&h=900">
+    </div>
+
+    <button class="next">&#10095;</button>
+</div>
+
+</section>
+
+<section>
+    <h2 style= text-align:center;>Sostenibilidad</h2>
+<p style="max-width:900px;margin:auto;text-align:center;font-size:18px;">
+El Parque Nacional Natural Tayrona es un modelo de sostenibilidad en Colombia, enfocado en equilibrar el ecoturismo con la protección de su frágil biodiversidad caribeña. Para mitigar el impacto humano, se implementan medidas como el cierre temporal del parque tres veces al año ("Respira Tayrona"), permitiendo que los ecosistemas se regeneren y respetando los espacios espirituales de los pueblos indígenas de la Sierra Nevada. Además, se promueve un turismo responsable que incluye la restricción de plásticos de un solo uso, el control de aforo y el monitoreo constante de flora y fauna, asegurando así la conservación del territorio a largo plazo. 
+
+
+
+</p>
+
+
+<script>
+let index = 0;
+const images = document.querySelector('.carousel-images');
+const total = images.children.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+    index = (index + 1) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    images.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+
+
+<footer>
+    © 2025 - Historias y Culturas del Mundo
+</footer>
+
+</body>
+</html>
+</body>
